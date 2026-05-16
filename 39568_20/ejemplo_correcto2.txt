@@ -1,0 +1,6 @@
+valor1 = 100;
+valor2 = 200;
+resultado = 999;
+output("Suma calculada"),
+mensaje = "OK";
+output("Proceso exitoso"),

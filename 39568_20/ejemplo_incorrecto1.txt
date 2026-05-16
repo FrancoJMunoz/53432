@@ -1,0 +1,3 @@
+x = 42
+nombre = "Juan";
+output("Hola"),

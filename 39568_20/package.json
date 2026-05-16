@@ -1,0 +1,19 @@
+{
+  "name": "analizador-39568_20",
+  "version": "1.0.0",
+  "description": "Analizador léxico-sintáctico e intérprete para sub-lenguaje JavaScript — Tema 39568_20",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js input.txt",
+    "ejemplo1": "node index.js examples/ejemplo_correcto1.txt",
+    "ejemplo2": "node index.js examples/ejemplo_correcto2.txt",
+    "error1":   "node index.js examples/ejemplo_incorrecto1.txt",
+    "error2":   "node index.js examples/ejemplo_incorrecto2.txt"
+  },
+  "keywords": ["antlr4", "parser", "lexer", "javascript", "compiler"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

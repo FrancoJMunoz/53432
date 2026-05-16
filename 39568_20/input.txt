@@ -1,0 +1,5 @@
+x = 42;
+nombre = "Ana";
+output("Hola mundo"),
+edad = 20;
+output("Proceso finalizado"),

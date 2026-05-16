@@ -1,0 +1,4 @@
+x = 10;
+output("inicio")
+nombre = "error";
+output("Falta coma al final"),

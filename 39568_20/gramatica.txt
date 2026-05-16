@@ -1,0 +1,39 @@
+GRAMÁTICA DEL SUBLENGUAJE JAVASCRIPT - Tema 39568_20
+======================================================
+
+Notación: BNF / ECMAScript extended
+
+Program           ::= { SimpleStatement }
+
+SimpleStatement   ::= AssignmentStatement
+                    | OutputStatement
+
+AssignmentStatement ::= Identifier "=" Constant ";"
+
+OutputStatement   ::= "output" "(" TextLiteral ")" ","
+
+Constant          ::= Number
+                    | TextLiteral
+
+TextLiteral       ::= '"' { any character except '"' } '"'
+
+Identifier        ::= letter { letter | digit | "_" }
+
+Number            ::= digit { digit }
+
+letter            ::= "a" | ... | "z" | "A" | ... | "Z"
+
+digit             ::= "0" | ... | "9"
+
+------------------------------------------------------
+TOKENS RECONOCIDOS:
+  KW_OUTPUT   → "output"
+  ASSIGN      → "="
+  SEMICOLON   → ";"
+  LPAREN      → "("
+  RPAREN      → ")"
+  COMMA       → ","
+  NUMBER      → digit { digit }
+  TEXT        → '"' { ~'"' } '"'
+  ID          → letter { letter | digit | "_" }
+  WS          → espacios/tabs/newlines  (ignorados)

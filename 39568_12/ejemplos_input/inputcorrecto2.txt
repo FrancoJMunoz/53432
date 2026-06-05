@@ -1,0 +1,8 @@
+for (x = 1; x <= 10; x++) {
+    printf("Iteracion con incremento");
+    printf("Segunda linea");
+    break;
+}
+for (n = 20; n > 0; n--) {
+    printf("Cuenta regresiva");
+}

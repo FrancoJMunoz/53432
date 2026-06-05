@@ -1,0 +1,6 @@
+for (i = 0; i == 5; i++) {
+    printf("Valido");
+}
+for (@x = 1; x < 3; x++) {
+    printf("Con error lexico");
+}

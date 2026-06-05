@@ -83,7 +83,7 @@ for (i = 0; i < 10; i++) {
 ```bash
 npm start
 ```
-
+- **NOTA**: En caso de que salga algún error de que no se encuentra "package.json", probablemente se deba a que no se está dentro del directorio del analizador, si no en el del legajo. Se soluciona simplemente escribiendo "cd 39568_12" en la terminal, y luego "npm start".
 ---
 
 ## Sintaxis Soportada

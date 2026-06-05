@@ -121,7 +121,7 @@ for (<variable> = <numero>; <variable> <op_relacional> <numero>; <variable> <op_
 ### Código válido
 
 ```c
-for (i = 0; i < 3; i++) {
+for (i = 0; i < 10; i++) {
     printf("Hola mundo");
 }
 ```
@@ -148,11 +148,18 @@ for (i = 0; i < 3; i++) {
 ────────────────────────────────────────────────────────────
 
 --- Traducción a JavaScript ---
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 10; i++) {
     console.log("Hola mundo");
 }
 
 --- Ejecutando programa ---
+Hola mundo
+Hola mundo
+Hola mundo
+Hola mundo
+Hola mundo
+Hola mundo
+Hola mundo
 Hola mundo
 Hola mundo
 Hola mundo
@@ -162,7 +169,7 @@ Hola mundo
 ### Código con error léxico
 
 ```c
-for (@x = 1; x < 5; x++) {
+for (@x = 1; x < 3; x++) {
     printf("Error");
 }
 ```

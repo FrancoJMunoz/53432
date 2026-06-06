@@ -58,3 +58,81 @@
   LBRACE        →  agrupador           '{'
   RBRACE        →  agrupador           '}'
   EOF           →  fin de archivo
+
+=========================================================
+  CONSIGNA DEL EJERCICIO
+=========================================================
+
+programa: instrucciones;
+instrucciones:
+instrucción
+| instrucciones instrucción
+;
+instruccion: bucle;
+bucle:
+"for" "("inicializacion ";" condicion ";" actualizacion ")" "{" sentencia "}"
+;
+inicializacion:
+identificador "=" numero
+;
+condicion:
+identificador operador_relacional numero
+;
+actualizacion:
+identificador operador_incremento
+;
+operador_relacional:
+"<"
+|"<="
+|">"
+|">="
+|"=="
+|" != "
+;
+operador_incremento:
+"++"
+|"--"
+;
+sentencia:
+salida
+| salida sentencia
+| terminar
+;
+salida:
+"printf" "("cadena ")" ";"
+;
+terminar:
+"break" ";"
+;
+identificador:
+letra { letra | digito }*
+;
+numero:
+{ digito }+
+;
+cadena:
+"\"" caracteres "\""
+;
+caracteres:
+carácter
+| caracteres carácter
+;
+carácter:
+letra
+| digito
+| símbolo
+;
+letra:
+"a" ... "z"
+| "A" ... "Z"
+;
+digito:
+"0" ... "9"
+;
+simbolo:
+"." | "," | "!" | "?" | ":" | ";" | "'"
+;
+
+=========================================================
+  CONTENIDO DEL ARCHIVO ForLoop.g4
+=========================================================

@@ -1,5 +1,5 @@
 =========================================================
-  GRAMÁTICA EN NOTACIÓN EBNF  –  Lenguaje ForLoop
+  GRAMÁTICA EN NOTACIÓN EBNF
 =========================================================
 
 <programa>      ::= { <instruccion> } EOF ;

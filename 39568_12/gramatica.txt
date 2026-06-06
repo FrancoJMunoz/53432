@@ -1,0 +1,60 @@
+=========================================================
+  GRAMÁTICA EN NOTACIÓN EBNF  –  Lenguaje ForLoop
+=========================================================
+
+<programa>      ::= { <instruccion> } EOF ;
+
+<instruccion>   ::= <bucle> ;
+
+<bucle>         ::= "for" "(" <inicializacion> ";" <condicion> ";" <actualizacion> ")" "{" <sentencia> "}" ;
+
+<inicializacion> ::= <id> "=" <numero> ;
+
+<condicion>     ::= <id> <operador_relacional> <numero> ;
+
+<actualizacion> ::= <id> <operador_incremento> ;
+
+<operador_relacional> ::= "<" | "<=" | ">" | ">=" | "==" | "!=" ;
+
+<operador_incremento> ::= "++" | "--" ;
+
+<sentencia>     ::= <salida>+
+                 |  { <salida> } <terminar> ;
+
+<salida>        ::= "printf" "(" <cadena> ")" ";" ;
+
+<terminar>      ::= "break" ";" ;
+
+<id>            ::= [a-zA-Z] ([a-zA-Z] | [0-9])* ;
+
+<numero>        ::= [0-9]+ ;
+
+<cadena>        ::= '"' { <caracter> } '"' ;
+
+<caracter>      ::= [a-zA-Z] | [0-9] | [.,!?:;' ] ;
+
+=========================================================
+  DESCRIPCIÓN DE TOKENS
+=========================================================
+
+  FOR           →  palabra reservada   'for'
+  PRINTF        →  palabra reservada   'printf'
+  BREAK         →  palabra reservada   'break'
+  IDENTIFICADOR →  identificador       [a-zA-Z]([a-zA-Z]|[0-9])*
+  NUMERO        →  número entero       [0-9]+
+  CADENA        →  cadena de texto     '"' ... '"'
+  LT            →  operador relacional '<'
+  LE            →  operador relacional '<='
+  GT            →  operador relacional '>'
+  GE            →  operador relacional '>='
+  EQ            →  operador relacional '=='
+  NEQ           →  operador relacional '!='
+  INC           →  operador incremento '++'
+  DEC           →  operador decremento '--'
+  ASSIGN        →  operador            '='
+  SEMI          →  delimitador         ';'
+  LPAREN        →  agrupador           '('
+  RPAREN        →  agrupador           ')'
+  LBRACE        →  agrupador           '{'
+  RBRACE        →  agrupador           '}'
+  EOF           →  fin de archivo
